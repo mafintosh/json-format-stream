@@ -1,6 +1,6 @@
 {
   "name": "json-format-stream",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Streaming JSON serializer that allows you to add metadata and will forward an error message if the stream is destroyed prematurely",
   "main": "index.js",
   "dependencies": {
