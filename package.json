@@ -8,7 +8,12 @@
     "duplexify": "^3.2.0",
     "through2": "^0.6.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "standard": "^2.3.2"
+  },
+  "scripts": {
+    "test": "standard"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/mafintosh/json-format-stream.git"

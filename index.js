@@ -10,7 +10,7 @@ module.exports = function (metadata) {
     this.push(data)
     cb()
   }, function (cb) {
-    this.push(',"error": '+JSON.stringify(err)+'}')
+    this.push(',"error": ' + JSON.stringify(err) + '}')
     cb()
   })
 
@@ -18,7 +18,7 @@ module.exports = function (metadata) {
 
   if (metadata) {
     Object.keys(metadata).forEach(function(key) {
-      out.push(JSON.stringify(key)+':'+JSON.stringify(metadata[key])+',')
+      out.push(JSON.stringify(key) + ':' + JSON.stringify(metadata[key]) + ',')
     })
   }
 
