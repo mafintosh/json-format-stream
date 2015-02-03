@@ -6,6 +6,8 @@ Streaming JSON serializer that allows you to add metadata and will forward an er
 npm install json-format-stream
 ```
 
+[![build status](http://img.shields.io/travis/mafintosh/json-format-stream.svg?style=flat)](http://travis-ci.org/mafintosh/json-format-stream)
+
 ## Usage
 
 ``` js
