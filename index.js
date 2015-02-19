@@ -17,7 +17,7 @@ module.exports = function (metadata) {
   out.push('{')
 
   if (metadata) {
-    Object.keys(metadata).forEach(function(key) {
+    Object.keys(metadata).forEach(function (key) {
       out.push(JSON.stringify(key) + ':' + JSON.stringify(metadata[key]) + ',')
     })
   }
