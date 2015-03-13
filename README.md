@@ -44,9 +44,15 @@ The main result is streamed using [JSONStream](https://github.com/dominictarr/JS
 
 ## API
 
-#### `stream = format(metadata)`
+#### `stream = format(metadata, options)`
 
 Creates a new JSON formatter. Any metadata properties you provide in the constructor will be set in the beginning of the JSON response.
+
+Pass `options.outputKey` to specify which key data is added to. Defaults to `result`.
+
+``` js
+var stream = format(null, {outputKey: 'data'})
+```
 
 ## License
 

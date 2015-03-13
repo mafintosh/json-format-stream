@@ -2,7 +2,8 @@ var through = require('through2')
 var JSONStream = require('JSONStream')
 var duplexify = require('duplexify')
 
-module.exports = function (metadata) {
+module.exports = function (metadata, opts) {
+  var outputKey = (opts && opts.outputKey) || 'result'
   var err = null
 
   var inp = JSONStream.stringify()
@@ -22,7 +23,7 @@ module.exports = function (metadata) {
     })
   }
 
-  out.push('"result":')
+  out.push('"' + outputKey + '":')
 
   var dup = duplexify.obj(inp, out, {destroy: false})
 
