@@ -52,3 +52,15 @@ tape('metadata', function (t) {
     t.end()
   }))
 })
+
+tape('opts.outputKey', function (t) {
+  var stream = format(null, {outputKey: 'data'})
+
+  stream.write({hello: 'world'})
+  stream.end()
+
+  stream.pipe(concat(function (data) {
+    t.same(JSON.parse(data), {data: [{hello: 'world'}], error: null})
+    t.end()
+  }))
+})
